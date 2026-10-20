@@ -1,0 +1,119 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: helvetica neue;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.parent{
+   min-height: 100vh;
+   width: 100%;
+  background-color: #111;
+  padding: 30px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card{
+    height: 350px;
+    width: 250px;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.top img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid #dadada;
+    padding: 2px;
+}
+
+.top button{
+    display: flex;
+    align-items: center;
+    border: 1px solid #dadada;
+    padding: 4px 8px;
+    font-size: 13px;
+    border-radius: 5px;
+    gap: 3px;
+    background-color: transparent;
+    color: #8b8b8b;
+}
+
+.bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1.5px solid #d7d7d7ce;
+    padding: 15px ;
+    gap: 5px;
+}
+
+.bottom button{
+    background-color: rgb(18,18,18);
+    color: #fff;
+    padding: 7px ;
+    border-radius: 5px;
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+    column-width: 600;
+}
+
+.bottom h3{
+  font-size: 17px;
+  font-weight: bold;
+  
+  margin-bottom: 4px;
+}
+.bottom p{
+  font-size: 10px;
+  color: #8b8b8b;
+}
+
+.center h3{
+    font-size: 17px;
+font-weight: bold;
+}
+
+.center h3 span{
+    font-size: 9px;
+    font-weight:400;
+    color: #aeaeae;
+}
+
+.center h2{
+    font-size: 21px;
+font-weight: bold;
+}
+
+.center .tag{
+    display: flex;
+    gap: 5px;
+    margin-top:10px
+}
+
+.center .tag h4{
+  font-size: 10px;
+  background-color: #e4e4e4;
+  color: #202020;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 3px;
+}
