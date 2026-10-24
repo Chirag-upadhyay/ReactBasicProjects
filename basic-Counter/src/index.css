@@ -1,0 +1,32 @@
+*{
+ margin: 0%;
+ padding: 0%;
+ background-color: black;
+}
+
+html,body{
+  height: 100%;
+  width: 100%;
+}
+
+h1{
+ font-size: 150px;
+  background-color: gray;
+  width: fit-content;
+  border-radius: 5%;
+  padding: 80px 150px;
+ color: azure;
+ margin-left: 500px;
+}
+
+button{
+  margin: 20px;
+  padding:30px 30px;
+  background-color:gray;
+  font-size: 20px;
+  border-radius: 5px;
+  color: white;
+  margin-top: 150px;
+margin-left: 250px;
+}
+
