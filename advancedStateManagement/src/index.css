@@ -1,0 +1,39 @@
+*{
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+html,body{
+  height: 100%;
+  width: 100%;
+}
+
+h1{
+  padding: 50px 100px;
+  font-size: 100px;
+ color: white;
+ background-color: aqua;
+ width: fit-content;
+ border-radius: 5px;
+ margin: 100px;
+}
+.parent{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+button{
+  background-color: aqua;
+  color: rgb(173, 48, 48);
+  padding: 20px;
+  font-size: larger;
+  
+}
