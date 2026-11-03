@@ -2,31 +2,29 @@ import { useEffect, useState } from 'react'
 import axios from 'axios';
 
 import './App.css'
+import Cards from './components/Cards';
 
 function App() {
  
    const [userData,setUserData] = useState([]);
+   
+   const [index,setIndex] = useState(1);
 
   const getData =async()=>{
-    const response= await axios.get('https://picsum.photos/v2/list?page=2&limit=15')
+    const response= await axios.get(`https://picsum.photos/v2/list?page=${index}&limit=10`)
     setUserData(response.data)
   }
 
   useEffect(function(){
     getData()
-  },[])
+  },[index])
 
-  let printUserData = 'not data available'
+  let printUserData = <h3 className='text-gray-300 text-xs absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-semibold'>loading...</h3>
  
   if(userData.length>0){
     printUserData = userData.map(function(elem,idx){
       return <div key={idx}>
-       <a href={elem.url}>
-         <div className='h-40 w-44 rounded-xl bg-white'>
-           <img className='h-full object-cover' src={elem.download_url} alt="" />
-        </div>
-        <h2 className='font-bold text-lg'>{elem.author}</h2>
-       </a>
+       <Cards elem={elem}/>
       </div>
     })
   }
@@ -34,8 +32,21 @@ function App() {
   return (
     <>
       <div className='bg-black overflow-auto p-4 h-screen text-white'>
-      <div className='flex flex-wrap gap-4'>
+      <div className='flex flex-wrap gap-4 h-[82%]'>
         {printUserData}
+      </div>
+      <div className='flex justify-center items-center gap-6 p-4 '>
+     <button onClick={()=>{
+      if(index>1){
+      setIndex(index-1)
+      setUserData([])
+    }
+     }} className='bg-amber-400 active:scale-95  text-sm text-black rounded px-4 py-2 font-semibold' >Prev</button>
+     <h4>Page{index}</h4>
+     <button onClick={()=>{
+      setUserData([])
+      setIndex(index+1)
+     }} className='bg-amber-400 active:scale-95 text-sm text-black rounded px-4 py-2 font-semibold'>Next</button>
       </div>
       </div>
       
