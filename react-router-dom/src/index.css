@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: helvetica neue;
+  color: white;
+}
+html,
+body{
+height: 100%;
+width: 100%;
+}
+body{
+  background-color: black;
+}
+
+h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 100px;
+  text-decoration:underline;
+}
+
+.Nav{
+  display: flex;
+  justify-content: space-between;
+  background-color: blueviolet;
+  height: 50px;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.Nav div{
+  display: flex;
+   gap: 40px;
+}
