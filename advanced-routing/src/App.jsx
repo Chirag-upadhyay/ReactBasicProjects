@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import { Routes,Route } from 'react-router-dom'
+import { Routes,Route, useParams } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -10,19 +10,24 @@ import Kids from './pages/Kids'
 import About from './pages/About'
 import Product from './pages/Product'
 import NotFound from './pages/NotFound'
+import Courses from './pages/Courses'
+import CourseDetail from './pages/CourseDetail'
+import Navbar2 from './components/Navbar2'
 
 const App=() =>{
 
+
+
   return (
     <>
-      <div>
+      <div className='h-screen bg-black text-white'>
         <Navbar/>
-        
-        <Routes>
+        <Navbar2/>
+        <Routes> 
           <Route path='/' element={<Home/>} />
           <Route path='/about' element={<About/>} />
-
-          
+          <Route path='courses' element={<Courses/>} />
+          <Route path='courses/:courseId' element={<CourseDetail/>} />
           <Route path='/product' element={<Product/>}>
           <Route path='men' element={<Men/>} />
           <Route path='women' element={<Women/>} />
